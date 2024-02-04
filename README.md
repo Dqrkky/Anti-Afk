@@ -1,1 +1,1 @@
-Checks if mouse mouves and puts it on discord with an rpc
+Checks if your mouse mouve's and puts an discord rpc to show the status
