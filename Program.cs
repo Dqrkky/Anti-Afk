@@ -16,16 +16,16 @@ partial class Program {
             Console.WriteLine($"Using Discord Pipe: {value}");
             RPCClient = new DiscordRpcClient(clientId.ToString(), input);
             RPCClient.Initialize();
-            Presence.Details = "Mouse Moving";
+            Presence.Details = "My coding skills are trash";
             while (true) {
                 if (mouse.IsInactive(1000)) {
-                    Presence.State = "Mouse is : Inactive";
+                    Presence.State = "Nope";
                 }
                 else {
-                    Presence.State = "Mouse is : Active";
+                    Presence.State = "Hey i'm back";
                 }
                 RPCClient.SetPresence(Presence);
-                Thread.Sleep(1000);
+                Thread.Sleep(5000);
             }
             RPCClient.Dispose();
         } else {
