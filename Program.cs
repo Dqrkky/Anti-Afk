@@ -10,7 +10,12 @@ partial class Program {
     static void Main() {
         Dictionary<int, string> discordPipesDictionary = pipes.Scan();
         Console.WriteLine($"Discord Pipes : {pipes.toString(discordPipesDictionary)}");
-        int input = int.Parse(Console.ReadLine());
+        int input;
+        try {
+            input = int.Parse(Console.ReadLine());
+        } catch {
+            input = -1;
+        }
         string value;
         if (discordPipesDictionary.TryGetValue(input, out value)) {
             Console.WriteLine($"Using Discord Pipe: {value}");
